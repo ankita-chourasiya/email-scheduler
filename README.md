@@ -1,24 +1,24 @@
-# README
+Manual Setup:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Install the required Ruby version (3.0.0) using your preferred Ruby version manager.
 
-Things you may want to cover:
+Install the necessary dependencies by running the following command: bundle install
 
-* Ruby version
+Configure the database connection in the config/database.yml file.
 
-* System dependencies
+Create and set up the database by running the following commands: rails db:create rails db:migrate
 
-* Configuration
+Start the Rails server by running: rails server
 
-* Database creation
 
-* Database initialization
+Create the user via postman
+Below I attach the collect for it.
 
-* How to run the test suite
+[email scheduler.postman_collection.zip](https://github.com/ankita-chourasiya/email-scheduler/files/11938550/email.scheduler.postman_collection.zip)
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+Also need to configure you gmail credentials for smtp in development.rb file
+
+Run the scheduler run the below command:
+`bundle exec clockwork clock.rb`
